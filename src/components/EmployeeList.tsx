@@ -1,16 +1,18 @@
-import { useEffect } from 'react';
-import API from '../api';
+import EmployeeCard from './EmployeeCard';
+import { Employee } from '../types';
+import { useFetchData } from '../hooks/useFetchData';
 
-type Props = {};
+const EmployeeList = () => {
+	const { response: employees, error } = useFetchData<Employee>('/employees');
 
-const EmployeeList = ({}: Props) => {
-	useEffect(() => {
-		API.get('/employees').then(({ data }) => {
-			console.log(data);
-		});
-	}, []);
-
-	return <div>EmployeeList</div>;
+	return (
+		<div className="">
+			<h1>EmployeeList</h1>
+			{employees
+				? employees.map(emp => <EmployeeCard key={emp.email} name={emp.name} />)
+				: null}
+		</div>
+	);
 };
 
 export default EmployeeList;
