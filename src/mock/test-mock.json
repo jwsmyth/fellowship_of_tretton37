@@ -1,0 +1,36 @@
+[
+  {
+      "name": "First guy",
+      "email": "test2@test.com",
+      "phoneNumber": "123123123",
+      "office": "Lund",
+      "manager": "Cool manager name",
+      "orgUnit": "/Incoming",
+      "mainText": "",
+      "gitHub": null,
+      "twitter": "@yesboi",
+      "stackOverflow": null,
+      "linkedIn": null,
+      "imagePortraitUrl": null,
+      "imageWallOfLeetUrl": null,
+      "highlighted": false,
+      "published": false
+  },
+  {
+      "name": "Second guy",
+      "email": "antoerh@gmail.com",
+      "phoneNumber": "+46123123123",
+      "office": "Lund",
+      "manager": "manager 2",
+      "orgUnit": "/Employees",
+      "mainText": "<p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem .</p><p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem .</p><p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem .</p>",
+      "gitHub": "coolguygithub",
+      "twitter": "@yesboi",
+      "stackOverflow": null,
+      "linkedIn": "/jonassmyth",
+      "imagePortraitUrl": "",
+      "imageWallOfLeetUrl": "",
+      "highlighted": false,
+      "published": true
+  }
+]

@@ -4,7 +4,7 @@ import EmployeeList from './EmployeeList';
 describe('<EmployeeList />', () => {
 	test('renders component', () => {
 		render(<EmployeeList />);
-		const textElement = screen.getByText(/EmployeeList/i);
+		const textElement = screen.getByRole('grid');
 		expect(textElement).toBeInTheDocument();
 	});
 });
