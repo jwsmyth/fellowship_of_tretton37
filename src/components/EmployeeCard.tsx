@@ -1,11 +1,6 @@
 import { Employee } from '../types';
 import placeholder from '../assets/portait-placeholder.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-	faGithub,
-	faTwitter,
-	faLinkedin,
-} from '@fortawesome/free-brands-svg-icons';
+import Socials from './Socials';
 
 const EmployeeCard = (employee: Employee) => {
 	return (
@@ -25,9 +20,11 @@ const EmployeeCard = (employee: Employee) => {
 					<p className="text-sm">Office: {employee.office}</p>
 				</div>
 				<div className="justify-self-end">
-					<FontAwesomeIcon className="px-1" size="lg" icon={faTwitter} />
-					<FontAwesomeIcon className="px-1" size="lg" icon={faGithub} />
-					<FontAwesomeIcon className="px-1" size="lg" icon={faLinkedin} />
+					<Socials
+						twitter={employee.twitter}
+						github={employee.gitHub}
+						linkedin={employee.linkedIn}
+					/>
 				</div>
 			</div>
 		</div>

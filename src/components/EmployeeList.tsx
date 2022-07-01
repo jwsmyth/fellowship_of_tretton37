@@ -5,6 +5,8 @@ import { useFetchData } from '../hooks/useFetchData';
 const EmployeeList = () => {
 	const { response: employees, error } = useFetchData<Employee>('/employees');
 
+	if (error)
+		return <h2 className="text-center text-red-500 italic text-xl">{error}</h2>;
 	return (
 		<>
 			<h1>EmployeeList</h1>
