@@ -16,10 +16,17 @@ const EmployeeList = () => {
 	return (
 		<>
 			<Tools>
-				<SearchBar search={searchName} setSearch={setSearchName} />
-				<SearchBar search={searchOffice} setSearch={setSearchOffice} />
+				<SearchBar label="Name" search={searchName} setSearch={setSearchName} />
+				<SearchBar
+					label="Office"
+					search={searchOffice}
+					setSearch={setSearchOffice}
+				/>
 			</Tools>
-			<div role="grid" className="grid gap-4">
+			<div
+				role="grid"
+				className="grid gap-4 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+			>
 				{employees
 					? employees
 							.filter(emp => {

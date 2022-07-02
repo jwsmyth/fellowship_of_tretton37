@@ -4,7 +4,10 @@ type SearchBarProps = {
 
 const Tools = ({ children }: SearchBarProps) => {
 	return (
-		<div data-testid="tools-container" className="p-4 my-4 bg-gray-200 rounded">
+		<div
+			data-testid="tools-container"
+			className="grid sm:grid-cols-2 gap-2 p-4 my-4 bg-gray-200 rounded"
+		>
 			{children}
 		</div>
 	);
