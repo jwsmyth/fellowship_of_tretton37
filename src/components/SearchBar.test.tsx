@@ -4,7 +4,11 @@ import SearchBar from './SearchBar';
 describe('<SearchBar />', () => {
 	test('renders component', async () => {
 		render(
-			<SearchBar label="name" search="hello" setSearch={() => jest.fn()} />
+			<SearchBar
+				label="name"
+				search="hello"
+				updateSetSearch={() => jest.fn()}
+			/>
 		);
 		const placeholder = await screen.findByPlaceholderText(/Search.../i);
 		expect(placeholder).toBeInTheDocument();
@@ -15,7 +19,7 @@ describe('<SearchBar />', () => {
 			<SearchBar
 				label="office"
 				search="search string"
-				setSearch={() => jest.fn()}
+				updateSetSearch={() => jest.fn()}
 			/>
 		);
 		const searchString = screen.getByDisplayValue(/search string/i);

@@ -21,9 +21,9 @@ describe('filterData function', () => {
 	test('should return both', () => {
 		const employeeOne: Employee = testMock[0];
 		const employeeTwo: Employee = testMock[1];
-		const resultOne = filterData(employeeOne, 'Lund', 'office');
+		const resultOne = filterData(employeeOne, 'Nybro', 'office');
 		expect(resultOne).toBe(true);
-		const resultTwo = filterData(employeeTwo, 'Lund', 'office');
+		const resultTwo = filterData(employeeTwo, 'Stockholm', 'office');
 		expect(resultTwo).toBe(true);
 	});
 
