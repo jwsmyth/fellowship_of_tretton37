@@ -4,7 +4,6 @@ import { useFetchData } from '../hooks/useFetchData';
 import { useState } from 'react';
 import Tools from './Tools';
 import SearchBar from './SearchBar';
-import { filterData } from '../utils/FilterData';
 import EmployeeTable from './EmployeeTable';
 import DisplayWrapper from './DisplayWrapper';
 import { GridContainer, TableContainer } from './Containers';
@@ -17,9 +16,23 @@ const EmployeeList = () => {
 	const [displayGrid, setDisplayGrid] = useState(true);
 
 	const filteredEmployees = (): Employee[] => {
-		return employees
-			.filter(emp => filterData(emp, searchName, 'name'))
-			.filter(emp => filterData(emp, searchOffice, 'office'));
+		if (searchName && searchOffice) {
+			return employees.filter(
+				emp =>
+					emp.name.toLowerCase().includes(searchName.toLowerCase()) &&
+					emp.office?.toLowerCase().includes(searchOffice.toLowerCase())
+			);
+		}
+		if (searchName)
+			return employees.filter(emp =>
+				emp.name.toLowerCase().includes(searchName.toLowerCase())
+			);
+		if (searchOffice)
+			return employees.filter(emp =>
+				emp.office?.toLowerCase().includes(searchOffice.toLowerCase())
+			);
+
+		return employees;
 	};
 
 	const updateNameSearch = (value: string) => {

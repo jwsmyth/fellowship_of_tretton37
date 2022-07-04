@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+# The fellowship of the tretton37
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Here we have the fellowship of tretton37. The employees are fetched from the 13|37 api and presented in Cards.\
+I've added two search bars, one for searching for a name and one for office.\
+You're also able to view the employees in table form by clicking "View in table" toggle button (and back to grid view again if clicked once more).\
+I've also included a button for clearing the search fields.
 
-In the project directory, you can run:
+I usually try to split up my code into components for reuseability and to make it easier to maintain and test.\
+I also find it easier to review and understand what the code is doing or supposed to do when it's in smaller parts.\
+Same goes for the type of code, so you'll see code for the api, components, hooks, mock and assets separated.\
+
+## Packages
+
+I started with create-react-app which comes with a few packages that I've not removed.\
+
+### Dependencies
+
+- Fortawesome/fontawesome
+  - I installed these two packages to easily use fontawesome icons as components.
+- Axios
+  - Axios for a more "capable" http requester instead of `fetch`.
+
+### Dev dependencies
+
+- Tailwind css (autoprefixer, postcss, tailwindcss)
+  - Installed these three packages to be able to use Tailwind CSS.
+- Axios-mock-adapter
+  - This package allows me to setup a mock instance of axios when running on localhost.
+
+## Stories completed
+
+### Design/accessibility
+
+- Responsive design
+  - I chose this story because I usually make all sites responsive anyway. It's how I usually start a project (mobile first).
+- Use modern CSS
+  - I wanted to do this story because I wanted to use Tailwind CSS. I've only used it once before but I'm really starting to like it. It's quite different writing all your CSS inline, but it's surprisingly fast when you learn the Tailwind commands.
+
+### Functionality
+
+- Sort by name and office
+  - A natural way to go for a representation of this sort. Wanted to add some functionality to the page.
+- Enable switch between grid and a table
+  - I had never done a "switch" like this before and I wanted to try it out.
+- Available on a free public url
+  - Beacuse why not? :) I remembered I have a netlify account and it's really easy to deploy.
+
+### Testing/QA
+
+- Use TypeScript
+  - I like using TypeScript! It helps a lot.
+
+## Instructions
+
+Navigate to the root of the project (where you found this file), and run the commands below... But first:
+
+### If you want to run the project locally with mock
+
+You'll need to add an .env file in the projects root directory and add the following:\
+`REACT_APP_MOCK=true`
+
+This will enable the mock server and use a mock file instead of making a request.
+
+### If you want to run the project locally with real api
+
+Add the following lines to the .env file if you want to use the real api:
+`REACT_APP_API_BASE=insert-real-api-here`
+`REACT_APP_API_KEY=insert-real-api-key-here`
+
+Set `REACT_APP_MOCK=false` or remove it completely if it's present in the .env file.
+
+### `npm install`
+
+This will install all necessary dependencies.
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This will spin up the project on port :3000
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Conclusion
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will hopefully get you up and running!

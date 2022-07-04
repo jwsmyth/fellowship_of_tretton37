@@ -15,3 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@layer components {
+  .link {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+  }
+}

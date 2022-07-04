@@ -6,7 +6,7 @@ export const GridContainer = ({ children }: EmployeeProps) => {
 	return (
 		<div
 			role="grid"
-			className="grid gap-4 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+			className="grid max-w-320 sm:max-w-none mx-auto gap-4 justify-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
 		>
 			{children}
 		</div>

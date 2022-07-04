@@ -11,4 +11,4 @@ const API_MOCK = axios.create();
 const axiosMockAdapter = new MockAdapter(API_MOCK, { delayResponse: 0 });
 axiosMockAdapter.onGet('/employees').reply(200, mockFile);
 
-export default API_LIVE;
+export default process.env.REACT_APP_MOCK === 'true' ? API_MOCK : API_LIVE;
