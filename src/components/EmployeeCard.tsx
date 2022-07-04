@@ -4,9 +4,9 @@ import Socials from './Socials';
 
 const EmployeeCard = (employee: Employee) => {
 	return (
-		<div className="max-w-sm rounded overflow-hidden shadow-lg">
+		<div className="max-w-sm rounded overflow-hidden shadow-lg sm:min-w-full">
 			<img
-				className="w-full p-4 h-80 object-cover"
+				className="min-w-full p-4 h-80 object-cover"
 				src={employee.imagePortraitUrl ?? placeholder}
 				alt={
 					employee.imagePortraitUrl

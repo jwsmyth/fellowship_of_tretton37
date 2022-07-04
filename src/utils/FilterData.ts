@@ -7,13 +7,13 @@ export const filterData = (
 ) => {
 	if (filter === 'name') {
 		return searchTerm
-			? employee.name.toLowerCase().includes(searchTerm.toLowerCase())
+			? employee.name?.toLowerCase().includes(searchTerm.toLowerCase())
 			: employee;
 	}
 
 	if (filter === 'office') {
 		return searchTerm
-			? employee.office.toLowerCase().includes(searchTerm.toLowerCase())
+			? employee.office?.toLowerCase().includes(searchTerm.toLowerCase())
 			: employee;
 	}
 

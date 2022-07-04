@@ -21,7 +21,7 @@ const Socials = ({ twitter, github, linkedin }: SocialProps) => {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<FontAwesomeIcon className="px-1" size="lg" icon={faTwitter} />
+					<FontAwesomeIcon className="px-1" size="sm" icon={faTwitter} />
 				</a>
 			)}
 			{github && (
@@ -30,16 +30,16 @@ const Socials = ({ twitter, github, linkedin }: SocialProps) => {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<FontAwesomeIcon className="px-1" size="lg" icon={faGithub} />
+					<FontAwesomeIcon className="px-1" size="sm" icon={faGithub} />
 				</a>
 			)}
 			{linkedin && (
 				<a
-					href={`${LINKEDIN_BASE_URL}/${linkedin}`}
+					href={`${LINKEDIN_BASE_URL}${linkedin}`}
 					target="_blank"
 					rel="noreferrer"
 				>
-					<FontAwesomeIcon className="px-1" size="lg" icon={faLinkedin} />
+					<FontAwesomeIcon className="px-1" size="sm" icon={faLinkedin} />
 				</a>
 			)}
 		</>
