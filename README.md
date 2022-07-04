@@ -77,7 +77,11 @@ This will install all necessary dependencies.
 
 ### `npm start`
 
-This will spin up the project on port :3000
+This will spin up the project on port :3000.
+
+### `npm run build`
+
+This will build the app.
 
 ## Conclusion
 
